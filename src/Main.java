@@ -10,6 +10,7 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
     }
 
     public static void task1(){
@@ -128,9 +129,32 @@ public class Main {
 
     public static void task7(){
 
+        //странная задача, непонятно что подразумевается под датой. классы использовать нельзя, тогда датой будет какойто день месяца
         System.out.println("Демонстрация задачи 7");
-        int numberFriday = 5;
+        int numberFriday = 1, currentDay = 1, numberWeek = 0;
+        int date = 31;
 
+        while (currentDay <= date){
+            if (currentDay - (numberWeek * 7) == numberFriday){
+                System.out.println("Сегодня пятница, " + currentDay + "-е число. Необходимо подготовить отчет");
+                numberWeek++;
+            }
+            currentDay ++;
+        }
+    }
 
+    public static void task8(){
+
+        System.out.println("Демонстрация задачи 8");
+        int cometYear = 79, currenttYear = 1823, finalYear = 2123, beforeCometYear = 1;
+
+        while (currenttYear <= finalYear){
+            if(beforeCometYear == cometYear){
+                beforeCometYear = 0;
+                System.out.println("Год " + currenttYear + " появляния кометы");
+            }
+            currenttYear++;
+            beforeCometYear++;
+        }
     }
 }
